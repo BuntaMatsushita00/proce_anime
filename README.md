@@ -2,12 +2,13 @@
 
 ## 登場人物
 - 名前
-    - 完璧主義者
-    - [https://scrapbox.io/files/63b668bbf15365001e6f9b4c.png]
+	- 完璧主義者
+	- ![DSC_00622](https://user-images.githubusercontent.com/105771941/210720881-4eff172a-b9b9-41ec-a98a-6fd94b932faa.png)
 
 - 名前　
 	- めんどくさがり
-	- [https://scrapbox.io/files/63b668d7980c54001eeef097.png]
+	- ![R0019708](https://user-images.githubusercontent.com/105771941/210720911-53ff6c6b-17d7-4b70-952f-c142febb72c8.png)
+
 
 ## あらすじ
 あるところに（完璧主義者）と（めんどくさがり）がいた。
