@@ -15,20 +15,25 @@ class Avatar {
     this.getClip("mouce").setParent(this.getClip("body"));
 
     this.getClip("body").images.add(0, loadImage("aho.png"));
+    this.getClip("body").images.add(1, loadImage("majime.png"));
     this.getClip("mouce").images.add(0, loadImage("mouce_close.png"));
     this.getClip("mouce").images.add(1, loadImage("mouce_open.png"));
+    this.getClip("mouce").images.add(2, loadImage("none.png"));
   }
 
   void draw(int x, int y) {
     switch(this.state) {
-    case "nomal":
-      this.normal();
+    case "aho":
+      this.aho();
+      break;
+    case "majime":
+      this.majime();
       break;
     case "talk":
       this.talk();
       break;
     default:
-      this.normal();
+      this.aho();
       break;
     }
     this.layers.get(0).setTranslation(x, y);
@@ -46,10 +51,18 @@ class Avatar {
     return null;
   }
 
-  void normal() {
+  void aho() {
     for (int i=0; i<layers.size(); i++) {
       layers.get(i).num = 0;
       layers.get(i).setRotation(0.0);
+      layers.get(i).setScale(1.0, 1.0);
+    }
+  }
+
+  void majime() {
+    this.getClip("body").num = 1;
+    this.getClip("mouce").num = 2;
+    for (int i=0; i<layers.size(); i++) {
       layers.get(i).setScale(1.0, 1.0);
     }
   }
