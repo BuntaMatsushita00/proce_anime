@@ -13,8 +13,6 @@ void setup() {
   size(1280, 720);
   avatar = new Avatar();
   minim = new Minim(this);  //初期化
-  // konnichiwa = minim.loadFile("01_konnichiwa.mp3");
-  // konnahuuni = minim.loadFile("02_konnahuuni.mp3");
   backscreen = loadImage("backgroundNoon.png");
 }
 
@@ -27,7 +25,7 @@ void keyPressed() {
   switch(key) {
   case '1':
     //noon aho
-    avatar.state = "normal";
+    avatar.state = "aho";
     break;
   case '2':
     //noon aho talk
@@ -35,7 +33,7 @@ void keyPressed() {
     break;
   case '3':
     //noon majime
-    avatar.state = "sleep";
+    avatar.state = "majime";
     break;
   case '4':
     //
@@ -48,7 +46,12 @@ void keyPressed() {
     avatar.state = "surprised";
     konnahuuni.play();
     break;
-  case '0':
+  case 'q':
+    backscreen = loadImage("backgroundNoon.png");
+  case 'w':
+    backscreen = loadImage("backgroundAfternoon.png");
+  case 'e':
+    backscreen = loadImage("backgroundNight.png");
   default:
     avatar.state = "normal";
     break;
