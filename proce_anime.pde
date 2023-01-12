@@ -1,9 +1,3 @@
-/**
- * Sample Avatar 1
- * 
- * 顔だけのサンプル
- */
-
 import ddf.minim.*;  //minimライブラリのインポート
 
 Minim minim;
@@ -19,9 +13,9 @@ void setup() {
   size(1280, 720);
   avatar = new Avatar();
   minim = new Minim(this);  //初期化
-  konnichiwa = minim.loadFile("01_konnichiwa.mp3");
-  konnahuuni = minim.loadFile("02_konnahuuni.mp3");
-  backscreen = loadImage("background.png");
+  // konnichiwa = minim.loadFile("01_konnichiwa.mp3");
+  // konnahuuni = minim.loadFile("02_konnahuuni.mp3");
+  backscreen = loadImage("backgroundNoon.png");
 }
 
 void draw() {
@@ -32,16 +26,19 @@ void draw() {
 void keyPressed() {
   switch(key) {
   case '1':
-    avatar.state = "breath";
+    //noon aho
+    avatar.state = "normal";
     break;
   case '2':
+    //noon aho talk
     avatar.state = "talk";
-    konnichiwa.play();
     break;
   case '3':
+    //noon majime
     avatar.state = "sleep";
     break;
   case '4':
+    //
     avatar.state = "smile";
     break;
   case '5':
