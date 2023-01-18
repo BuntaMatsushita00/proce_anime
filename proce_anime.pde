@@ -6,14 +6,19 @@ AudioPlayer konnahuuni;
 
 Avatar avatar;
 PImage backscreen;
-
+PImage backscreen1;
+PImage backscreen2;
+PImage backscreen3;
 void setup() {
   noCursor();
   frameRate(10);
   size(1280, 720);
   avatar = new Avatar();
   minim = new Minim(this);  //初期化
-  backscreen = loadImage("backgroundNoon.png");
+  backscreen1 = loadImage("backgroundNoon.png");
+  backscreen2 = loadImage("backgroundAfternoon.png");
+  backscreen3 = loadImage("backgroundNight.png");
+  backscreen = backscreen1;
 }
 
 void draw() {
@@ -24,12 +29,12 @@ void draw() {
 void keyPressed() {
   switch(key) {
   case '1':
-    //noon aho
-    avatar.state = "aho";
+    //noon humajime
+    avatar.state = "humajime";
     break;
   case '2':
-    //noon aho talk
-    avatar.state = "talk";
+    //noon humajime talk
+    avatar.state = "humajime talk";
     break;
   case '3':
     //noon majime
@@ -37,21 +42,14 @@ void keyPressed() {
     break;
   case '4':
     //
-    avatar.state = "smile";
+    avatar.state = "none";
     break;
   case '5':
-    avatar.state = "anger";
-    break;
+    backscreen = backscreen1;
   case '6':
-    avatar.state = "surprised";
-    konnahuuni.play();
-    break;
-  case 'q':
-    backscreen = loadImage("backgroundNoon.png");
-  case 'w':
-    backscreen = loadImage("backgroundAfternoon.png");
-  case 'e':
-    backscreen = loadImage("backgroundNight.png");
+    backscreen = backscreen2;
+  case '7':
+    backscreen = backscreen3;
   default:
     avatar.state = "normal";
     break;
