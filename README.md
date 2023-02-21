@@ -85,7 +85,7 @@
 
 
 ## result 
-![result](https://drive.google.com/file/d/1dtZ2qQRe3f8teikvBwhGLpC8pmRaXDhN/view?usp=sharing)
+https://drive.google.com/file/d/1dtZ2qQRe3f8teikvBwhGLpC8pmRaXDhN/view?usp=sharing
 
 ## 使用イラスト
 - https://hiyokoyarou.com/post-2069/
